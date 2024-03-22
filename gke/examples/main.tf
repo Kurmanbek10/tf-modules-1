@@ -1,5 +1,5 @@
 module "gke_cluster" {
-    source = "/Users/aika/Git/tf-modules/gke"
+    source = "../"
     service_account_id           = "gke-service-account"
     service_account_display_name = "GKE Service Account"
     cluster_name                 = "dev-cluster"
