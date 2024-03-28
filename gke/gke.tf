@@ -1,10 +1,12 @@
 resource "google_service_account" "default" {
   account_id   = var.service_account_id
+  project      = var.project_id
   display_name = var.service_account_display_name
 }
 
 resource "google_container_cluster" "primary" {
   name               = var.cluster_name
+  project            = var.project_id
   location           = var.cluster_location
   initial_node_count = var.initial_node_count
 
